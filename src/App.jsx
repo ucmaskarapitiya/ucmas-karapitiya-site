@@ -1,5 +1,9 @@
 import React from 'react'
 import logo from './assets/ucmas-logo.png'
+import heroImage from './assets/focus-superpower.png'
+import aboutImage from './assets/memory-abacus.png'
+import skillImage from './assets/essential-skills.png'
+import promoSinhala from './assets/sinhala-promo.png'
 
 export default function App() {
   const [trialForm, setTrialForm] = React.useState({
@@ -25,6 +29,7 @@ export default function App() {
   ]
 
   const facebookLink = 'https://www.facebook.com/share/17mmfpbcoE/'
+  const whatsappBase = 'https://wa.me/94712300900'
 
   const branches = [
     {
@@ -89,7 +94,7 @@ export default function App() {
     ]
 
     const text = encodeURIComponent(lines.join('\n'))
-    window.open(`https://wa.me/94712300900?text=${text}`, '_blank')
+    window.open(`${whatsappBase}?text=${text}`, '_blank')
   }
 
   return (
@@ -112,12 +117,7 @@ export default function App() {
             ))}
           </nav>
 
-          <a
-            href="https://wa.me/94712300900"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-2xl bg-red-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
-          >
+          <a href={whatsappBase} target="_blank" rel="noreferrer" className="rounded-2xl bg-red-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-90">
             WhatsApp Us
           </a>
         </div>
@@ -132,7 +132,7 @@ export default function App() {
                 Trusted child mental development program
               </span>
               <h1 className="text-4xl font-bold leading-tight tracking-tight text-slate-900 md:text-6xl">
-                Unlock Your Child’s Full Brain Potential with UCMAS
+                Unlock Your Child&apos;s Full Brain Potential with UCMAS
                 <span className="mt-3 block text-2xl font-semibold leading-snug text-red-700 md:text-3xl">
                   ඔබේ දරුවාගේ මොළයේ හැකියාවන් වර්ධනය කිරීමට අදම ආරම්භ කරන්න
                 </span>
@@ -147,7 +147,7 @@ export default function App() {
                 <a href="#trial-booking" className="rounded-2xl bg-red-700 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:opacity-90">
                   Book a Free Trial / නොමිලේ Trial එකක් Book කරන්න
                 </a>
-                <a href="https://wa.me/94712300900" target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-red-700 hover:text-red-700">
+                <a href={whatsappBase} target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-red-700 hover:text-red-700">
                   Chat on WhatsApp / WhatsApp මඟින් අමතන්න
                 </a>
               </div>
@@ -170,11 +170,13 @@ export default function App() {
             <div className="relative">
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-red-100 via-amber-50 to-sky-50 blur-2xl" />
               <div className="relative overflow-hidden rounded-[2rem] bg-white p-4 shadow-2xl ring-1 ring-slate-100">
-                <img src={logo} alt="UCMAS Sri Lanka competition artwork" className="h-full w-full rounded-[1.5rem] object-cover" />
+                <img src={heroImage} alt="UCMAS focus and attention development" className="h-full w-full rounded-[1.5rem] object-cover" />
                 <div className="mt-4 rounded-[1.5rem] bg-slate-50 p-5">
                   <div className="text-sm font-semibold uppercase tracking-[0.18em] text-red-700">UCMAS Karapitiya</div>
-                  <div className="mt-2 text-2xl font-bold text-slate-900">Professional mental development training for children</div>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">A supportive learning path focused on concentration, memory, confidence, and fast thinking.</p>
+                  <div className="mt-2 text-2xl font-bold text-slate-900">Focus, confidence, and stronger brain skills for young minds</div>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    A modern and supportive learning path that helps children improve concentration, memory, logic, and fast thinking.
+                  </p>
                 </div>
               </div>
             </div>
@@ -184,7 +186,7 @@ export default function App() {
         <section id="about" className="mx-auto max-w-7xl px-4 py-20 md:px-6">
           <div className="grid items-center gap-10 md:grid-cols-[0.95fr_1.05fr]">
             <div className="overflow-hidden rounded-[2rem] bg-white shadow-xl ring-1 ring-slate-100">
-              <img src={logo} alt="UCMAS Sri Lanka" className="h-full w-full object-cover" />
+              <img src={aboutImage} alt="UCMAS memory and abacus training" className="h-full w-full object-cover" />
             </div>
             <div>
               <span className="inline-flex rounded-full bg-red-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-red-700">About UCMAS</span>
@@ -232,6 +234,47 @@ export default function App() {
           </div>
         </section>
 
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 md:px-6">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="inline-flex rounded-full bg-red-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-red-700">
+                Learning outcomes
+              </span>
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">Visual Highlights of What UCMAS Builds in Children</h2>
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                Better focus, stronger memory, faster thinking, and more confident learning — presented in a cleaner, more visual way for parents.
+              </p>
+            </div>
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              {[
+                {
+                  image: skillImage,
+                  title: 'Essential Skills for Child Minds',
+                  text: 'Supports concentration, visualization, speed, logic, and memory through structured mental training.',
+                },
+                {
+                  image: aboutImage,
+                  title: 'Abacus Training for Better Memory',
+                  text: 'Abacus-based learning helps children improve memory, focus, calculation speed, and problem-solving confidence.',
+                },
+                {
+                  image: heroImage,
+                  title: 'Focus is a Superpower',
+                  text: 'Children can train attention and concentration like a muscle with guided UCMAS practice and regular class work.',
+                },
+              ].map((item) => (
+                <div key={item.title} className="overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-slate-100">
+                  <img src={item.image} alt={item.title} className="h-72 w-full object-cover" />
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
+                    <p className="mt-2 leading-7 text-slate-600">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="programs" className="mx-auto max-w-7xl px-4 py-20 md:px-6">
           <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr]">
             <div>
@@ -239,7 +282,7 @@ export default function App() {
               <p className="mt-5 text-lg leading-8 text-slate-600">
                 The UCMAS program uses the abacus as a tool to activate both sides of the brain. Through guided learning, children improve concentration, memory, mental speed, confidence, and analytical thinking in an engaging classroom environment.
               </p>
-              <p className="mt-4 text-lg leading-8 text-slate-600">This program supports not only academic performance, but also the overall development of a child’s thinking ability and self-confidence.</p>
+              <p className="mt-4 text-lg leading-8 text-slate-600">This program supports not only academic performance, but also the overall development of a child&apos;s thinking ability and self-confidence.</p>
             </div>
             <div className="rounded-3xl bg-red-700 p-8 text-white shadow-xl">
               <h3 className="text-2xl font-bold">Program Details / වැඩසටහන් විස්තර</h3>
@@ -261,7 +304,9 @@ export default function App() {
                 <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">Our Branch Network</h2>
                 <p className="mt-4 text-lg text-slate-600">Choose the center most convenient for your family and contact us for trial booking and enrollment support.</p>
               </div>
-              <a href="https://wa.me/94712300900" target="_blank" rel="noreferrer" className="w-fit rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-red-700 hover:text-red-700">Need help choosing a branch?</a>
+              <a href={whatsappBase} target="_blank" rel="noreferrer" className="w-fit rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-red-700 hover:text-red-700">
+                Need help choosing a branch?
+              </a>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-2">
               {branches.map((branch) => (
@@ -273,7 +318,7 @@ export default function App() {
                     <p className="mt-3 text-base leading-7 text-slate-600">{branch.address}</p>
                     <div className="mt-6 flex flex-wrap gap-3">
                       <a href={`tel:${branch.phone}`} className="rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-red-700 hover:text-red-700">Call Now</a>
-                      <a href={`https://wa.me/94712300900?text=${encodeURIComponent(`Hello UCMAS Karapitiya, I would like more details about the ${branch.name} branch.`)}`} target="_blank" rel="noreferrer" className="rounded-2xl bg-red-700 px-4 py-2 text-sm font-medium text-white transition hover:opacity-90">WhatsApp Now</a>
+                      <a href={`${whatsappBase}?text=${encodeURIComponent(`Hello UCMAS Karapitiya, I would like more details about the ${branch.name} branch.`)}`} target="_blank" rel="noreferrer" className="rounded-2xl bg-red-700 px-4 py-2 text-sm font-medium text-white transition hover:opacity-90">WhatsApp Now</a>
                       <a href={branch.map} target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-red-700 hover:text-red-700">View Map</a>
                     </div>
                   </div>
@@ -286,28 +331,20 @@ export default function App() {
         <section id="trial-booking" className="mx-auto max-w-7xl px-4 py-20 md:px-6">
           <div className="grid gap-10 md:grid-cols-2">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-                Book a Free Trial Session
-                <span className="mt-3 block text-xl font-semibold text-red-700 md:text-2xl">නොමිලේ Trial Session එකක් වෙන්කරගන්න</span>
-              </h2>
+              <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">Book a Free Trial Session</h2>
+              <p className="mt-3 block text-xl font-semibold text-red-700 md:text-2xl">නොමිලේ Trial Session එකක් වෙන්කරගන්න</p>
               <p className="mt-5 text-lg leading-8 text-slate-600">Give your child the opportunity to experience the UCMAS learning method before enrolling. Our free trial session helps parents understand the program and gives children a chance to experience the classroom environment.</p>
               <div className="mt-8 rounded-3xl bg-slate-50 p-6 ring-1 ring-slate-100">
                 <h3 className="text-lg font-semibold text-slate-900">What happens next?</h3>
                 <ul className="mt-4 space-y-3 text-slate-600">
-                  <li>• Submit your child’s details and preferred branch.</li>
+                  <li>• Submit your child&apos;s details and preferred branch.</li>
                   <li>• Our team will contact you to confirm the suitable day and time.</li>
                   <li>• The form opens WhatsApp with all entered details ready to send.</li>
                 </ul>
               </div>
             </div>
 
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                handleTrialSubmit()
-              }}
-              className="rounded-3xl bg-white p-6 shadow-xl ring-1 ring-slate-100 md:p-8"
-            >
+            <form onSubmit={(e) => { e.preventDefault(); handleTrialSubmit(); }} className="rounded-3xl bg-white p-6 shadow-xl ring-1 ring-slate-100 md:p-8">
               <div className="grid gap-4">
                 <input value={trialForm.parentName} onChange={(e) => handleTrialInputChange('parentName', e.target.value)} className="rounded-2xl border border-slate-200 px-4 py-3 outline-none placeholder:text-slate-400 focus:border-red-700" placeholder="Parent Name" />
                 <input value={trialForm.childName} onChange={(e) => handleTrialInputChange('childName', e.target.value)} className="rounded-2xl border border-slate-200 px-4 py-3 outline-none placeholder:text-slate-400 focus:border-red-700" placeholder="Child Name" />
@@ -332,12 +369,31 @@ export default function App() {
 
         <section className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-4 md:px-6">
+            <div className="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <span className="inline-flex rounded-full bg-red-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-red-700">Sinhala highlight</span>
+                <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">A Local Parent-Friendly Message for Your Audience</h2>
+                <p className="mt-5 text-lg leading-8 text-slate-600">
+                  This section gives the website a stronger Sri Lankan parent connection with a familiar Sinhala promotional visual while keeping the overall site professional.
+                </p>
+                <p className="mt-4 text-base leading-7 text-slate-600">
+                  It helps visitors feel that UCMAS Karapitiya understands local parents, children, and the kind of education-focused growth they are looking for.
+                </p>
+              </div>
+              <div className="overflow-hidden rounded-[2rem] bg-white shadow-xl ring-1 ring-slate-100">
+                <img src={promoSinhala} alt="UCMAS Sinhala promotional visual" className="h-full w-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 md:px-6">
             <div className="mx-auto max-w-3xl text-center">
               <span className="inline-flex rounded-full bg-red-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-red-700">Why parents trust us</span>
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">More Than a Class — A Stronger Foundation for Your Child</h2>
               <p className="mt-5 text-lg leading-8 text-slate-600">Parents choose UCMAS because it supports concentration, memory, confidence, discipline, and faster thinking in a structured and encouraging learning environment.</p>
             </div>
-
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {[
                 ['Confidence Building', 'Children gain confidence as they improve focus, speed, and performance through guided practice.'],
@@ -359,11 +415,11 @@ export default function App() {
               <div>
                 <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/90">Start today</span>
                 <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-5xl">Give Your Child the Opportunity to Grow with UCMAS</h2>
-                <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80">Book a free trial, speak to our team on WhatsApp, and find the right branch for your child’s learning journey.</p>
+                <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80">Book a free trial, speak to our team on WhatsApp, and find the right branch for your child&apos;s learning journey.</p>
               </div>
               <div className="flex flex-wrap gap-4 md:justify-end">
-                <a href="#trial-booking" className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-red-700 shadow-lg transition hover:opacity-90">Book a Free Trial / නොමිලේ Trial එකක් Book කරන්න</a>
-                <a href="https://wa.me/94712300900" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-red-700">Chat on WhatsApp / WhatsApp මඟින් අමතන්න</a>
+                <a href="#trial-booking" className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-red-700 shadow-lg transition hover:opacity-90">Book a Free Trial</a>
+                <a href={whatsappBase} target="_blank" rel="noreferrer" className="rounded-2xl border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-red-700">Chat on WhatsApp</a>
               </div>
             </div>
           </div>
@@ -383,10 +439,10 @@ export default function App() {
                 ['What are the fees?', 'Registration fee is Rs. 2,000 and the monthly class fee is Rs. 3,000.'],
                 ['How can I book a free trial?', 'You can fill in the trial booking form on this website or contact us directly on WhatsApp to arrange a suitable day and time.'],
                 ['Which branches are available?', 'We currently show Galle and Matara branch details on this website. You can contact us if you need help choosing the most suitable branch.'],
-              ].map(([title, text]) => (
-                <div key={title} className="rounded-[1.5rem] bg-white p-6 shadow-sm ring-1 ring-slate-100">
-                  <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
-                  <p className="mt-2 leading-7 text-slate-600">{text}</p>
+              ].map(([q, a]) => (
+                <div key={q} className="rounded-[1.5rem] bg-white p-6 shadow-sm ring-1 ring-slate-100">
+                  <h3 className="text-lg font-semibold text-slate-900">{q}</h3>
+                  <p className="mt-2 leading-7 text-slate-600">{a}</p>
                 </div>
               ))}
             </div>
@@ -410,10 +466,6 @@ export default function App() {
                 <p className="mt-2 leading-7 text-slate-600">We use your details only to respond to inquiries, confirm trial sessions, and support the enrollment process for UCMAS Karapitiya.</p>
               </div>
             </div>
-            <div className="mt-6 rounded-[1.5rem] bg-slate-50 p-6 ring-1 ring-slate-100">
-              <h3 className="text-lg font-semibold text-slate-900">Contact for privacy questions</h3>
-              <p className="mt-2 leading-7 text-slate-600">For any privacy-related questions, please contact UCMAS Karapitiya at 0712300900 or ucmaskarapitiya@gmail.com.</p>
-            </div>
           </div>
         </section>
 
@@ -432,11 +484,10 @@ export default function App() {
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a href="tel:0712300900" className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:opacity-90">Call Us</a>
-                <a href="https://wa.me/94712300900" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-slate-900">WhatsApp Us</a>
+                <a href={whatsappBase} target="_blank" rel="noreferrer" className="rounded-2xl border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-slate-900">WhatsApp Us</a>
                 <a href={facebookLink} target="_blank" rel="noreferrer" className="rounded-2xl border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-slate-900">Facebook Page</a>
               </div>
             </div>
-
             <div className="rounded-3xl bg-white p-6 text-slate-800 shadow-xl md:p-8">
               <h3 className="text-2xl font-bold text-slate-900">Send a Message / පණිවිඩයක් යවන්න</h3>
               <div className="mt-6 grid gap-4">
@@ -454,14 +505,9 @@ export default function App() {
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-3 md:px-6">
           <div>
-            <div className="flex items-center gap-3">
-              <img src={logo} alt="UCMAS Sri Lanka" className="h-12 w-12 rounded-2xl object-cover ring-1 ring-red-100" />
-              <div>
-                <div className="text-lg font-bold text-red-700">UCMAS Karapitiya</div>
-                <div className="text-xs text-slate-500">Operated by WODistributor</div>
-              </div>
-            </div>
-            <p className="mt-3 text-sm leading-6 text-slate-600">Helping children improve memory, concentration, confidence, and mental development through the trusted UCMAS learning method.</p>
+            <div className="text-lg font-bold text-red-700">UCMAS Karapitiya</div>
+            <div className="text-xs text-slate-500">Operated by WODistributor</div>
+            <p className="mt-3 text-sm leading-6 text-slate-600">Helping children improve memory, concentration, confidence, and mental development through a structured and trusted UCMAS learning experience.</p>
           </div>
           <div>
             <div className="font-semibold text-slate-900">Quick Links</div>
@@ -486,7 +532,7 @@ export default function App() {
 
       <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-3 sm:flex-row">
         <a href="#trial-booking" className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-red-700 shadow-2xl ring-1 ring-slate-200 transition hover:opacity-90">Book Free Trial</a>
-        <a href="https://wa.me/94712300900" target="_blank" rel="noreferrer" className="rounded-full bg-red-700 px-5 py-3 text-sm font-semibold text-white shadow-2xl transition hover:opacity-90">WhatsApp</a>
+        <a href={whatsappBase} target="_blank" rel="noreferrer" className="rounded-full bg-red-700 px-5 py-3 text-sm font-semibold text-white shadow-2xl transition hover:opacity-90">WhatsApp</a>
       </div>
     </div>
   )
